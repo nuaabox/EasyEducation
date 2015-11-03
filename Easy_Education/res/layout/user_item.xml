@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:id="@+id/recommond_head"
+        />
+
+    <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical" >
+
+       <LinearLayout
+            android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:paddingTop="10dp">
+            <TextView
+                android:id="@+id/recommond_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:text="用户名"
+                android:paddingLeft="10dp"
+                android:textColor="@color/color_home_username"
+               />
+
+              <TextView
+                  android:id="@+id/recommond_job"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"  
+                  android:gravity="right"              
+                  android:text="职业或专业"
+                  android:textColor="@color/color_institution"
+                  android:textSize="16dp" />
+ 
+      </LinearLayout>
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+         android:paddingLeft="10dp"
+         android:layout_marginTop="10dp"
+          
+          >
+             <TextView
+                 android:id="@+id/lable1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="fill_parent"
+                 android:text="标签一"
+                 android:background="@color/color_tagbg"            
+                 android:textSize="14dp"
+                 android:textColor="@color/color_tagfont"
+                 
+                 />
+               <TextView
+                 android:id="@+id/lable2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="fill_parent"
+                 android:text="标签二"
+                 android:background="@color/color_tagbg"              
+                 android:textSize="14dp"
+                 android:layout_marginLeft="15dp"
+                    android:textColor="@color/color_tagfont"
+                
+                 />
+                 <TextView
+                 android:id="@+id/lable3"
+                 android:layout_width="wrap_content"
+                 android:layout_height="fill_parent"
+                 android:text="标签三"
+                 android:background="@color/color_tagbg"                
+                 android:textSize="14dp"
+                 android:layout_marginLeft="15dp"
+                 android:textColor="@color/color_tagfont"                
+                 />
+     
+              </LinearLayout>
+
+</LinearLayout>
+</LinearLayout>

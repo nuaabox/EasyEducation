@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_theme" >
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_name" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_selfimage" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_accountname" 
+            android:layout_gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/login_activity_username"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:hint="请输入您的手机号"
+            android:textColorHint="#ffffff"
+             android:textColor="#ffffff"
+            
+             >
+        <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/linearLayout2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/imageView1"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="76dp"
+          android:orientation="horizontal" >
+
+          <ImageView
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:layout_alignParentLeft="true"
+              android:layout_centerVertical="true"
+              android:src="@drawable/icon_password" 
+               android:layout_gravity="center_vertical"/>
+
+          <EditText
+              android:id="@+id/login_activity_password"
+              android:layout_width="fill_parent"
+              android:layout_height="40dp"
+              android:layout_alignParentLeft="true"
+              android:layout_centerVertical="true"
+              android:ems="10"
+              android:hint="请输入您的密码"
+               android:textColor="#ffffff"
+              android:textColorHint="#ffffff" 
+              android:password="true">
+
+              
+          </EditText>
+      </LinearLayout>
+
+      <TextView
+          android:id="@+id/login_acitivity_loginbtn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/linearLayout2"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="20dp"
+          android:background="@drawable/btn_bg"
+          android:paddingBottom="5dp"
+          android:paddingLeft="80dp"
+          android:paddingRight="80dp"
+          android:paddingTop="5dp"
+          android:text="登陆"
+          android:textSize="19dp"
+          android:textColor="#ffffff"
+         />
+
+      <TextView
+          android:background="@drawable/text_bg"
+          android:id="@+id/login_acitivity_newuser"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/linearLayout2"
+          android:layout_below="@+id/login_acitivity_loginbtn"
+          android:layout_marginTop="16dp"
+          android:text="新用户"
+          android:textColor="#ffffff" />
+
+         <TextView
+               android:background="@drawable/text_bg"
+             android:id="@+id/login_acitivity_fogetpassword"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBaseline="@+id/login_acitivity_newuser"
+             android:layout_alignBottom="@+id/login_acitivity_newuser"
+             android:layout_alignRight="@+id/linearLayout2"
+             android:text="忘记密码?"
+             android:textColor="#ffffff" />
+
+</RelativeLayout>

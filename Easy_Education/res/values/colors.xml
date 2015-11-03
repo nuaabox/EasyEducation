@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="welcome_onrange">#FF6402</color>
+    <color name="title_bg">#3498DB</color>
+    <color name="item_function_list_divider">#E4E4E4</color>
+    <color name="color_theme">#fb7299</color>
+    <color name="color_loginfont">#fed6d6</color>
+    <color name="color_login">#ffc6c6</color>
+    <color name="color_logup">#c6e8ff</color>
+    <color name="color_institution">#9c9c9c</color>
+    <color name="color_home_username">#3c3b3b</color>
+    <color name="color_tagbg">#f4f4f4</color>
+    <color name="color_tagfont">#8ea1d2</color>
+    <color name="color_username">#737474</color>
+    <color name="color_2ndbutton">#aaddaf</color>
+    <color name="color_done">#a1a1a1</color>
+    <color name="color_title">#333333</color>
+    <color name="color_subtitle">#618aaa</color>
+    <color name="color_body">#7a7a7a</color>
+    <color name="color_status">#6597cf</color>
+    <color name="color_edit">#eedbd4</color>
+    <color name="color_edititembg">#f4f4f4</color>
+    <color name="color_edititemstroke">#cecece</color>
+    
+    
+        <color name="black_overlay">#66000000</color>
+    <color name="gray_background">#ffececec</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#E51A18</color>
+    <color name="line_color">#523E2E</color>
+   
+    <color name="search_tab_nomarl">#363636</color>
+    <color name="search_tab_select">#E82926</color>
+    <color name="menu_item_text_color">#E60200</color>
+    
+    <color name="news_item_has_read_textcolor">#828282</color>
+    <color name="news_item_no_read_textcolor">#363636</color>
+    
+    <color name="text_background_2">#fc8ead</color>
+    
+    
+    <drawable name="theme">#fb7299</drawable>
+    <drawable name="gray">#ccc</drawable>
+    <drawable name="btn_notfocus">#fc8ead</drawable>
+    <drawable name="btn_focus">#fee8ef</drawable>
+    
+    
+    
+    
+    
+    
+    
+</resources>

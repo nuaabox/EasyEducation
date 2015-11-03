@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+  
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/color_theme"
+      android:orientation="horizontal"
+      >
+
+      <ImageView
+          android:id="@+id/news_back_main"
+          android:layout_width="wrap_content"
+          android:layout_height="30dp"
+          android:layout_marginTop="5dp"
+          android:src="@drawable/icon_back"
+          android:layout_centerVertical="true" />
+
+      <TextView
+          android:id="@+id/textView1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_toRightOf="@+id/news_back_main"
+          android:padding="10dp"
+          android:text="名校动态"
+          android:textColor="#ffffff"
+          android:textSize="20dp"
+          android:gravity="center" />
+  </RelativeLayout>
+  <TextView
+      android:id="@+id/news_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="消息标题"
+      android:textSize="30dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginLeft="10dp"
+      android:textColor="@color/color_title"
+      />
+  <RelativeLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+       android:layout_marginTop="5dp"
+      >
+      <TextView
+          android:id="@+id/news_date"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:textColor="@color/color_subtitle"
+          android:text="2015-7-11"
+          android:textSize="16dp"
+          android:layout_marginLeft="10dp"
+          />
+
+        <TextView
+            android:id="@+id/news_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="55dp"
+            android:layout_toRightOf="@+id/news_date"
+            android:text="易教APP团队"
+            android:textColor="@color/color_subtitle"
+            android:textSize="16dp" />
+      
+  </RelativeLayout>
+  <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+          
+            >
+  <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" 
+       
+      >
+        
+      <ImageView
+          android:id="@+id/news_img"
+          android:layout_width="fill_parent"
+          android:layout_height="160dp"
+        
+           />
+      <TextView
+          android:layout_marginTop="5dp"
+          android:id="@+id/news_text"
+          android:layout_height="wrap_content"
+          android:layout_width="fill_parent"
+          android:text="  易教APP团队今天成立啦，易教APP是专注与线上教育的团队"
+          
+          
+          />
+      
+  </LinearLayout>
+  </ScrollView>
+  
+</LinearLayout>

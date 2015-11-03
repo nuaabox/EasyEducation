@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+     <ImageView
+         android:id="@+id/first_list_headimg"
+         android:layout_width="60dip"
+         android:layout_height="60dip"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
+         android:layout_marginLeft="7dp"
+         android:layout_marginTop="7dp"
+         android:scaleType="centerInside"
+         android:src="@drawable/hehe" />
+
+     <TextView
+         android:id="@+id/first_list_newstitle"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+      
+         android:layout_marginLeft="18dp"
+         android:layout_toRightOf="@+id/first_list_headimg"
+         android:text="android程序设计"
+         android:layout_marginTop="45dp"
+         android:textColor="@color/color_theme"
+         android:textSize="12dp" />
+
+     <TextView
+         android:id="@+id/first_list_newstime"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:layout_marginRight="24dp"
+         android:layout_marginTop="15dp"
+         android:text="今天3.10"
+         android:textColor="#969696"
+         android:textSize="10dp" />
+
+     <TextView
+         android:id="@+id/first_list_username"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/first_list_newstitle"
+         android:layout_alignTop="@+id/first_list_newstime"
+         android:text="条本"
+         android:textSize="15dp" />
+
+</RelativeLayout>

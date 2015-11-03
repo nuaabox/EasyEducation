@@ -1,0 +1,25 @@
+package com.hwd.cw.test;
+
+import com.hwd.cw.test.model.User;
+
+import io.rong.imkit.RongIM;
+import io.rong.imlib.RongIMClient.ConnectCallback;
+import android.app.Application;
+import android.widget.Toast;
+
+public class MyApp extends Application {
+	public String userId = "20150410153001";
+	public String userName = "测试融云";
+	public String userImgUrl = "http://rongcloud-web.qiniudn.com/docs_demo_rongcloud_logo.png";
+
+	public User globelUser;//保存当前成功登录的用户的信息
+	@Override
+	public void onCreate() {
+		super.onCreate();
+		RongIM.init(this);
+
+		String token = "TzP61nGQpSsA2D8RcnO46l7k+6b8VaWEizVXtkuHaUyX758dwEunZj/TwaDtQSR3gFa7wyVwiEc9Fyh2GPItAGjM+e6Rl4sm";
+
+		
+	}
+}

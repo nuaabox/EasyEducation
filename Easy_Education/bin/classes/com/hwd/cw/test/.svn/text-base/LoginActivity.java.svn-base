@@ -1,0 +1,112 @@
+package com.hwd.cw.test;
+
+import io.rong.imkit.RongIM;
+import io.rong.imkit.RongIM.GetFriendsProvider;
+import io.rong.imkit.RongIM.GetUserInfoProvider;
+import io.rong.imlib.RongIMClient.ConnectCallback;
+import io.rong.imlib.RongIMClient.UserInfo;
+
+import java.util.List;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.hwd.cw.test.https.DataProvider;
+import com.hwd.cw.test.https.UserHttpClass;
+import com.hwd.cw.test.utils.MyUtils;
+import com.lidroid.xutils.ViewUtils;
+import com.lidroid.xutils.view.annotation.ContentView;
+import com.lidroid.xutils.view.annotation.ViewInject;
+import com.lidroid.xutils.view.annotation.event.OnClick;
+
+@ContentView(R.layout.ap_login_view)
+public class LoginActivity extends Activity {
+	public static final int MSG_WHAT_CHECK_LOGIN_USER = 0x01;
+
+	@ViewInject(R.id.uNameEdit)
+	private EditText uNameEdit;
+	@ViewInject(R.id.uPassEdit)
+	private EditText uPassEdit;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		ViewUtils.inject(this);
+	}
+
+	@OnClick({ R.id.loginBtn })
+	public void onClick(View view) {
+		switch (view.getId()) {
+		case R.id.loginBtn:
+			login();
+			break;
+		}
+	}
+
+	private void login() {
+		UserHttpClass.newInstance().loginUser(this, refreshHandler,
+				uNameEdit.getText().toString(), uPassEdit.getText().toString());
+	}
+
+	private Handler refreshHandler = new Handler() {
+		public void handleMessage(android.os.Message msg) {
+			switch (msg.what) {
+			case MSG_WHAT_CHECK_LOGIN_USER:
+				if ((Boolean) msg.obj) {
+					connectRongYunServer();
+					//获取当前用户会话列表
+					RongIM.getInstance().startConversationList(LoginActivity.this);
+				}
+				break;
+
+			default:
+				break;
+			}
+		};
+	};
+	
+	private void connectRongYunServer(){
+		MyApp myApp = (MyApp)getApplicationContext();
+		try {
+			RongIM.connect(myApp.globelUser.getToken(), new ConnectCallback() {
+
+				@Override
+				public void onError(ErrorCode arg0) {
+					Toast.makeText(getApplicationContext(),
+							"登录失败", Toast.LENGTH_SHORT).show();
+				}
+
+				@Override
+				public void onSuccess(String arg0) {
+					Toast.makeText(getApplicationContext(),
+							"登录成功", Toast.LENGTH_SHORT).show();
+					initRongImData();
+				}
+			});
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private void initRongImData(){
+		final MyApp myApp = (MyApp)getApplicationContext();
+		//如果说你的程序集成了会话列表的功能，那么这个方法就是初始化你的用户信息，同步到融云服务器
+		RongIM.getInstance().setGetUserInfoProvider(new GetUserInfoProvider() {
+			@Override
+			public UserInfo getUserInfo(String arg0) {
+				return new UserInfo(myApp.globelUser.getUserId(), myApp.globelUser.getUsername(), "");
+			}
+		}, false);
+		//初始化好友关系
+		RongIM.setGetFriendsProvider(new GetFriendsProvider() {
+			@Override
+			public List<UserInfo> getFriends() {
+				return MyUtils.fortmatUserToUserInfo(DataProvider.getTestUserData());
+			}
+		});
+	}
+}

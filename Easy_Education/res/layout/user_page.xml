@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_theme"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/userpage_back_main"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/userpage_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/userpage_back_main"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="个人主页"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/userpage_scrollview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout1" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" >
+
+            <ImageView
+                android:id="@+id/userspage_background_img"
+                android:layout_width="fill_parent"
+                android:layout_height="160dp"
+                android:background="@drawable/bigimg1"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/userspage_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/userspage_userhead"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@+id/userspage_userhead"
+                android:text="Innocence"
+                android:textSize="19dp" />
+
+            <TextView
+                android:id="@+id/userspage_usernumb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/userspage_username"
+                android:layout_below="@+id/userspage_username"
+                android:text="161340131"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/userspage_school"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/userspage_usernumb"
+                android:layout_alignBottom="@+id/userspage_usernumb"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/userspage_usernumb"
+                android:text="南京航空航天大学"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/imageview55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/userspage_usernumb"
+                android:src="@drawable/divide_bar" />
+
+            <com.easyeducation.view.CircleImageView
+                android:id="@+id/userspage_userhead"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="124dp"
+                android:src="@drawable/hehe" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/userspage_userhead"
+                android:layout_below="@+id/imageview55"
+                android:layout_centerVertical="true"
+                android:text="个性签名:"
+                android:textColor="@color/color_theme"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/userpage_sentence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/userspage_userhead"
+                android:layout_below="@+id/textView1"
+                android:layout_marginTop="5dp"
+                android:text="不在是你的世界谁也都伟大，无需负责的说法"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/userpage_sentence"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/divide_bar" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView1"
+                android:layout_below="@+id/imageView1"
+                android:text="自我介绍:"
+                android:textColor="@color/color_theme"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/userpage_introduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_alignRight="@+id/userpage_sentence"
+                android:layout_below="@+id/textView2"
+                android:text="百度翻译基本上是正确的。但是，由于百度翻译是一种机器翻译
+            adpter用的是继承的baseadapter，我知道给整个listview设置点击事件就用listview.setOnItemClickListener（listener）就可以，可是如果item里面某一项的点击事件该怎么设置？是在adapter里面，给textview或imageview什么的设置点击事
+            adpter用的是继承的baseadapter，我知道给整个listview设置点击事件就用listview.setOnItemClickListener（listener）就可以，可是如果item里面某一项的点击事件该怎么设置？是在adapter里面，给textview或imageview什么的设置点击事
+            adpter用的是继承的baseadapter，我知道给整个listview设置点击事件就用listview.setOnItemClickListener（listener）就可以，可是如果item里面某一项的点击事件该怎么设置？是在adapter里面，给textview或imageview什么的设置点击事
+            adpter用的是继承的baseadapter，我知道给整个listview设置点击事件就用listview.setOnItemClickListener（listener）就可以，可是如果item里面某一项的点击事件该怎么设置？是在adapter里面，给textview或imageview什么的设置点击事
+            adpter用的是继承的baseadapter，我知道给整个listview设置点击事件就用listview.setOnItemClickListener（listener）就可以，可是如果item里面某一项的点击事件该怎么设置？是在adapter里面，给textview或imageview什么的设置点击事
+            adpter用的是继承的baseadapter，我知道给整个listview设置点击事件就用listview.setOnItemClickListener（listener）就可以，可是如果item里面某一项的点击事件该怎么设置？是在adapter里面，给textview或imageview什么的设置点击事
+            ，
+"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView1"
+                android:layout_below="@+id/imageView2"
+                android:text="最近发布:"
+                android:textColor="@color/color_theme"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/userpage_recentpublish1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView3"
+                android:layout_below="@+id/textView3"
+                android:text="《如何学好高中化学》"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/userpage_recentpublish2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/userpage_recentpublish1"
+                android:layout_below="@+id/userpage_recentpublish1"
+                android:text="《C语言中指针的应用技巧》"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/userpage_recentpublish3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/userpage_recentpublish2"
+                android:layout_below="@+id/userpage_recentpublish2"
+                android:text="《南京航空航天大学是个好大学吗？》"
+                android:textSize="12dp" />
+            <TextView
+              
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/userpage_recentpublish3"
+                android:layout_below="@+id/userpage_recentpublish3"
+                android:text="易教科技有限公司
+                			  易教科技有限公司
+                			  易教科技有限公司
+                			  易教科技有限公司
+                			  易教科技有限公司"
+                android:textSize="12dp" />
+            
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/userpage_introduction"
+                android:src="@drawable/divide_bar" />
+
+           
+
+        </RelativeLayout>
+    </ScrollView>
+    
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/useroage_focus"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:text="关注"
+            android:textColor="#ffffff"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/useroage_chat"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:text="聊天"
+            android:textColor="#ffffff"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+</RelativeLayout>

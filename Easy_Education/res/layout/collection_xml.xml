@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/color_theme"
+      android:orientation="horizontal"
+      >
+
+      <ImageView
+          android:id="@+id/collection_back_main"
+          android:layout_width="wrap_content"
+          android:layout_height="30dp"
+          android:layout_marginTop="5dp"
+          android:src="@drawable/icon_back"
+          android:layout_centerVertical="true" />
+
+      <TextView
+          android:id="@+id/textView1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_toRightOf="@+id/collection_back_main"
+          android:padding="10dp"
+          android:text="我的收藏"
+          android:textColor="#ffffff"
+          android:textSize="20dp"
+          android:gravity="center" />
+  </RelativeLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+        <TextView
+            android:id="@+id/co_univercity_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收藏的大学"
+            android:textSize="20dp"
+             android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:textColor="@color/color_theme" 
+            android:layout_weight="1"
+            android:gravity="center_horizontal"/>
+
+         <TextView
+            android:id="@+id/co_user_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收藏的人"
+            android:textSize="20dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:textColor="@color/color_theme"
+             android:layout_weight="1"
+             android:gravity="center_horizontal"
+           />   
+        </LinearLayout>
+     <ImageView
+         android:id="@+id/co_move_bar"
+         android:layout_width="fill_parent"
+         android:layout_height="5dp"
+         android:src="@drawable/co_move_bar"
+           android:scaleType="matrix"
+         
+         />
+  
+  <android.support.v4.view.ViewPager  
+      
+                android:id="@+id/collection_pager"  
+      
+                android:layout_width="fill_parent"  
+      
+                android:layout_height="fill_parent" >  
+      
+            </android.support.v4.view.ViewPager>  
+</LinearLayout>

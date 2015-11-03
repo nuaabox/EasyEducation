@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_theme" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/icon1"
+        android:paddingBottom="50dp" />
+
+    <EditText
+        android:id="@+id/login_username"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="20dp"
+        android:hint="账号" 
+        android:textColor="@color/color_loginfont"
+        android:textColorHint="@color/color_loginfont"
+        android:gravity="center"/>
+
+     <EditText
+         android:id="@+id/login_passphrase"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"       
+        android:layout_below="@+id/login_username"
+         android:layout_marginTop="5dp"
+         android:ems="10"
+         android:gravity="center"
+         android:hint="密码"
+         android:inputType="textPassword"
+         android:textColor="@color/color_loginfont"
+         android:textColorHint="@color/color_loginfont" />
+
+     <Button
+         android:id="@+id/login_btn"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/login_passphrase"
+         android:layout_marginTop="5dp"
+         android:background="@color/color_login"
+         android:ems="10"
+         android:gravity="center"
+         android:text="登陆"
+         android:textColor="#FFFFFf"
+         android:textSize="20dp" />
+
+       <Button
+         android:id="@+id/logup_btn"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:background="@color/color_logup"
+         android:gravity="center"
+         android:text="注册"
+         android:ems="10"
+          android:layout_marginTop="5dp"
+          android:textSize="20dp"
+          android:paddingTop="3dp"
+          android:paddingBottom="3dp"
+         android:layout_below="@+id/login_btn"
+         android:textColor="@color/color_institution" />
+
+</RelativeLayout>

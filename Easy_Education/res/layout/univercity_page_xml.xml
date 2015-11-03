@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/color_theme"    
+      >
+
+      <ImageView
+          android:id="@+id/univercity_back_main"
+          android:layout_width="wrap_content"
+          android:layout_height="30dp"
+          android:layout_marginTop="5dp"
+          android:src="@drawable/icon_back"
+          android:layout_centerVertical="true" />
+
+      <TextView
+          android:id="@+id/univercity_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_toRightOf="@+id/univercity_back_main"
+          android:padding="10dp"
+          android:text="大学名"
+          android:textColor="#ffffff"
+          android:textSize="20dp"
+          android:gravity="center" />
+  </RelativeLayout>
+  
+    
+    <RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="14dp"
+        android:text="收藏"
+        android:textColor="@color/color_institution"
+        android:textSize="16dp" />
+
+   
+    <TextView
+        android:id="@+id/univercity_collection_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@+id/textView1"
+        android:text="16"
+        android:textSize="16dp" />
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="144dp" >
+
+        <TextView
+            android:id="@+id/univercitypage_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/univercitypage_head"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="17dp"
+            android:text=""
+            android:textSize="20dp"
+            android:textColor="@color/color_home_username" />
+
+        <TextView
+            android:id="@+id/univercitypage_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/univercitypage_name"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/univercitypage_name"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textColor="@color/color_home_username" />
+
+        <ImageView
+            android:id="@+id/univercitypage_head"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignLeft="@+id/univercitypage_name"
+            android:layout_alignParentTop="true"
+           
+            android:scaleType="centerCrop"/>
+
+    </RelativeLayout>
+<TextView
+	    android:id="@+id/univercitycollection_btn"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"  
+	    android:background="@color/color_2ndbutton"
+	    android:paddingLeft="100dp"
+	    android:paddingRight="100dp"
+	    android:paddingTop="5dp"
+	    android:paddingBottom="5dp"
+	    android:textColor="#ffffff"
+	    android:text="收藏" 
+	    android:layout_gravity="center_horizontal"
+	    android:layout_marginLeft="40dp"
+	    android:layout_marginRight="40dp"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="热 门 用 户"
+    android:textColor="@color/color_theme"
+    android:paddingLeft="20dp"
+    android:layout_marginTop="15dp"
+    
+    />
+    
+  
+    <ListView
+        android:layout_marginTop="15dp"
+    android:id="@+id/univercitypage_list"
+     android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"  
+    
+    />
+    
+</LinearLayout>

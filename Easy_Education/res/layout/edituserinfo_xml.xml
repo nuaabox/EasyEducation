@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+   <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/color_theme"
+      android:orientation="horizontal"
+      >
+
+      <ImageView
+          android:id="@+id/edit_back_main"
+          android:layout_width="wrap_content"
+          android:layout_height="30dp"
+          android:layout_marginTop="5dp"
+          android:src="@drawable/icon_back"
+          android:layout_centerVertical="true" />
+
+      <TextView
+          android:id="@+id/textView1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_toRightOf="@+id/edit_back_main"
+          android:padding="10dp"
+          android:text="用户信息"
+          android:textColor="#ffffff"
+          android:textSize="20dp"
+          android:gravity="center" />
+  </RelativeLayout>
+    <LinearLayout 
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_weight="1"
+         android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/user_info_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/color_edit"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="编辑"
+                android:textColor="@color/color_username"
+                android:textSize="21dp" />
+
+            <TextView
+                android:id="@+id/mycollect_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/user_info_btn"
+                android:layout_alignBottom="@+id/user_info_btn"
+                android:layout_marginRight="14dp"
+                android:layout_toLeftOf="@+id/textView1"
+                android:text=" 0 "
+                android:textSize="21dp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/mycollect_num"
+                android:layout_alignBottom="@+id/mycollect_num"
+                android:layout_alignParentRight="true"
+                android:text="收藏"
+                android:textColor="@color/color_institution"
+                android:textSize="21dp" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"  
+            android:orientation="vertical"                     
+            >
+
+            <ImageView
+                android:id="@+id/change_user_head"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+               
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="刘彦麟"
+                android:textSize="16dp" 
+                android:textColor="@color/color_home_username"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/username_text"/>
+             <EditText
+                 android:id="@+id/username_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textSize="16dp" 
+                android:textColor="@color/color_home_username"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="南京航空航天大学计算机科学与技术学院"
+                android:textSize="16dp" 
+                android:textColor="@color/color_institution"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/userdetail_text"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="南京航空航天大学计算机科学与技术学院"
+                android:textSize="16dp" 
+                android:textColor="@color/color_institution"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/userdetail_edit"
+                android:visibility="gone"
+                />
+           </LinearLayout>
+           <RelativeLayout
+               android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+               
+         		 >
+              <EditText
+                 android:id="@+id/lable1_edit"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:hint="标签一"
+                 android:background="@color/color_tagbg"            
+                 android:textSize="14dp"
+                   android:layout_alignParentTop="true"
+                     android:layout_marginRight="47dp"
+                     android:layout_toLeftOf="@+id/lable2_edit"
+                 android:textColor="@color/color_tagfont"
+                 android:visibility="gone"  
+                 />
+                 <EditText
+                 android:id="@+id/lable2_edit"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:hint="标签二"
+                 android:layout_alignParentTop="true"
+                 android:layout_centerHorizontal="true"
+                 android:background="@color/color_tagbg"              
+                 android:textSize="14dp"              
+                 android:textColor="@color/color_tagfont"
+                 android:visibility="gone"
+                            
+                 />
+                 <EditText
+                 android:id="@+id/lable3_edit"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:hint="标签三"
+                 android:background="@color/color_tagbg"                
+                 android:textSize="14dp"               
+                 android:layout_alignParentTop="true"
+                 android:layout_marginLeft="47dp"
+                 android:layout_toRightOf="@+id/lable2_edit"
+                 android:textColor="@color/color_tagfont"     
+                 android:visibility="gone"           
+                 />
+
+                 <TextView
+                     android:id="@+id/lable1_text"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentTop="true"
+                     android:layout_marginRight="47dp"
+                     android:layout_toLeftOf="@+id/lable2_text"
+                     android:background="@color/color_tagbg"
+                     android:hint="标签一"
+                     android:textColor="@color/color_tagfont"
+                     android:textSize="14dp" />
+
+                 <TextView
+                     android:id="@+id/lable2_text"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentTop="true"
+                     android:layout_centerHorizontal="true"
+                     android:background="@color/color_tagbg"
+                     android:hint="标签二"
+                     android:textColor="@color/color_tagfont"
+                     android:textSize="14dp" />
+
+                 <TextView
+                     android:id="@+id/lable3_text"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                    
+                     android:layout_alignParentTop="true"
+                     android:layout_marginLeft="47dp"
+                     android:layout_toRightOf="@+id/lable2_text"
+                     android:background="@color/color_tagbg"
+                     android:hint="标签三"
+                     android:textColor="@color/color_tagfont"
+                     android:textSize="14dp" />
+            
+               </RelativeLayout>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/my_detail_text"
+            android:hint="这里是个人简介"
+            android:padding="20dp"
+
+            />
+          <EditText
+             android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+        
+            android:hint="这里是个人简介"
+            android:padding="20dp"
+            android:id="@+id/my_detail_edit"
+            />
+        
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+package com.hwd.cw.test;
+
+import io.rong.imkit.RongIM;
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+
+import com.lidroid.xutils.ViewUtils;
+import com.lidroid.xutils.view.annotation.event.OnClick;
+
+public class MainActivity extends Activity {
+	public static final String ACTION_DMEO_RECEIVE_MESSAGE = "action_demo_receive_message";
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		ViewUtils.inject(this);
+	}
+
+
+	@OnClick({R.id.gotoView,R.id.gotoFriendsView,R.id.gotoChatRoom})
+	public void onClick(View view) {
+		switch (view.getId()) {
+		case R.id.gotoView:
+			RongIM.getInstance().startPrivateChat(MainActivity.this,
+					"12", "测试帐号");
+			break;
+		case R.id.gotoFriendsView:
+			// 启动会话列表
+			RongIM.getInstance().startConversationList(this);
+			break;
+		case R.id.gotoChatRoom:
+			RongIM.getInstance().startChatroom(this, "20150412", "测试聊天室");
+			break;
+		default:
+			break;
+		}
+	}
+}
